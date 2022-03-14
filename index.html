@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Juego del ahorcado</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Juego del ahorcado para Oracle y Alura / Latam </h1>
+    <p class="parrafo">Encuentra la palabra escondida, presiona una letra</p>
+    
+	<input class="Empezar" type="button" value="EMPEZAR!" onclick="functionletter()"/>
+
+
+    <div class="game-container">
+        <svg height="250" width="200" class="figure-container">
+            <!-- Rod -->
+            <line x1="20" y1="20" x2="100" y2="20" />
+            <line x1="100" y1="20" x2="100" y2="50" />
+            <line x1="20" y1="20" x2="20" y2="230" />
+            <line x1="0" y1="230" x2="60" y2="230" />
+
+            <!-- Head -->
+            <circle cx="100" cy="70" r="20" class="figure-part" />
+            <!-- Body -->
+            <line x1="100" y1="90" x2="100" y2="150" class="figure-part" />
+            <!-- Arms -->
+            <line x1="100" y1="120" x2="80" y2="100" class="figure-part" />
+            <line x1="100" y1="120" x2="120" y2="100" class="figure-part" />
+            <!-- Legs -->
+            <line x1="100" y1="150" x2="80" y2="180" class="figure-part" />
+            <line x1="100" y1="150" x2="120" y2="180" class="figure-part" />
+        </svg>
+
+        <div class="wrong-letters-container">
+            <div id="wrong-letters"></div>
+        </div>
+        <div class="word" id="word"></div>
+
+
+
+
+    <!-- Notification -->
+    <div class="notification-container" id="notification-container">
+        <p>Ya intentaste con esa letra, proba con otra</p>
+    </div>
+
+
+    </div>
+
+
+    <div class="ingpalabra">
+        <h2 class="tituloingresarpalabra" id="tituloingresarpalabras"> Añadir una palabra a las opciones </h2>
+        <input class="ingpalboxtext" id="addword" type="text">
+        <input class="ingpalbox" id="botonaniadir" type="button" value="Añadir" onclick="aniadirpalabra()"/>
+        <input class="ingpalbox" id="otrapalabra" type="button" value="Cambiar palabra" onclick="otrapalabra()"/>   
+    </div>
+
+
+    <!-- Container for final message -->
+    <div class="popup-container" id="popup-container">
+        <div class="popup">
+            <h2 id="final-message"></h2>
+            <button id="play-button">Jugar de nuevo?</button>
+        </div>
+    </div>
+
+    
+    <footer>
+        <p class="copyright">Segundo desafio de Oracle y Alura/Latam | &copy Copyright Damián Stella - 2022 | Marzo 2022</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
