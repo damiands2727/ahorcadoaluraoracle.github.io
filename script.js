@@ -11,6 +11,8 @@ const btnotrapalabra = document.getElementById ('otrapalabra');
 const btnletra = document.getElementById ('btn-letter');
 let boolrepetida= false;
 
+
+
 var words = ['ORACLE', 'ALURA'];
 
 console.log (words)
@@ -135,6 +137,7 @@ displayWord();
 
 function aniadirpalabra() {
     var addword2 = document.getElementById("addword").value;
+    addword2 = addword2.toUpperCase();
     if (addword2 !== "") {
         words.push(addword2);
     }
